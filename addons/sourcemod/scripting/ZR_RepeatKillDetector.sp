@@ -108,7 +108,7 @@ public Action Command_ForceRepeator(int client, int argc)
 	if (argc < 1)
 	{
 		CReplyToCommand(client, "{green}[ZR] {default}Usage: zr_killrepeator {olive}<0|1>");
-		CReplyToCommand(client, "{green}[ZR] {red}1 = Block respawn {default}| {green}0 = Allow respawn");
+		CReplyToCommand(client, "{green}[ZR] {red}0 = Block respawn {default}| {green}1 = Allow respawn");
 		return Plugin_Handled;
 	}
 
