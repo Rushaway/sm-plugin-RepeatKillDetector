@@ -73,7 +73,7 @@ stock void ToggleRepeatKill(int client, bool value)
 	{
 		g_bBlockRespawn = true;
 		LogAction(client, -1, "[ZR] %L Enabled the Repeat killer protection. Disabling respawn for this round.", client);
-		PrintToChatAll("{green}[ZR]{default} Repeat killer detector force toggled on. Disabling respawn for this round.");
+		CPrintToChatAll("{green}[ZR]{default} Repeat killer detector force toggled on. Disabling respawn for this round.");
 	}
 	else
 	{
@@ -81,12 +81,12 @@ stock void ToggleRepeatKill(int client, bool value)
 		{
 			g_bBlockRespawn = false;
 			LogAction(client, -1, "[ZR] %L %s the Repeat killer protection. \n[ZR] %s respawn for this round.", client, (value ? "Enabled" : "Disabled"), (value ? "Disabled" : "Enabled"));
-			PrintToChatAll("{green}[ZR]{default} Repeat killer detector force toggled off. Re-enabling respawn for this round.");
+			CPrintToChatAll("{green}[ZR]{default} Repeat killer detector force toggled off. Re-enabling respawn for this round.");
 			RespawnAllClients();
 		}
 		else
 		{
-			PrintToChat(client, "{green}[ZR]{default} Repeat killer is already turned off!");
+			CPrintToChat(client, "{green}[ZR]{default} Repeat killer is already turned off!");
 		}
 	}
 }
